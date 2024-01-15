@@ -7,6 +7,7 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="EJERCICIO RADIO BUTTON"
@@ -17,54 +18,49 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.089" />
 
-    <TextView
-        android:id="@+id/lblPregunta"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="SELECCIONA UNA OPCION"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.259" />
-
     <RadioGroup
         android:id="@+id/radioGroup"
-        android:layout_width="304dp"
-        android:layout_height="167dp"
-        android:layout_marginStart="68dp"
-        android:layout_marginTop="264dp"
+        android:layout_width="344dp"
+        android:layout_height="87dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="148dp"
+        android:orientation="horizontal"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+
         <RadioButton
             android:id="@+id/radioButton"
-            android:layout_width="match_parent"
+            android:layout_width="186dp"
             android:layout_height="wrap_content"
-            android:text="OPCION 1" />
+            android:text="MASCULINO" />
 
         <RadioButton
             android:id="@+id/radioButton2"
-            android:layout_width="match_parent"
+            android:layout_width="158dp"
             android:layout_height="wrap_content"
-            android:text="OPCION 2" />
+            android:text="FEMENINO" />
 
-        <RadioButton
-            android:id="@+id/radioButton3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="OPCION 3" />
     </RadioGroup>
 
     <Button
         android:id="@+id/btnMostrar"
-        android:layout_width="199dp"
-        android:layout_height="82dp"
+        android:layout_width="204dp"
+        android:layout_height="81dp"
         android:layout_marginEnd="104dp"
-        android:layout_marginBottom="120dp"
+        android:layout_marginBottom="36dp"
         android:text="Mostrar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
+    <ToggleButton
+        android:id="@+id/tglBotonClaro"
+        android:layout_width="146dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="272dp"
+        android:layout_marginEnd="148dp"
+        android:text="CLARO"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

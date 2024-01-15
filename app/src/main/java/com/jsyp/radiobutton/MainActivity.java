@@ -7,13 +7,14 @@ import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
+import android.widget.ToggleButton;
 
 public class MainActivity extends AppCompatActivity {
 
     private RadioGroup radioGroup;
-    private RadioButton radioButton1, radioButton2, radioButton3;
+    private RadioButton radioButton1, radioButton2;
 
-
+    ToggleButton
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         radioGroup = findViewById(R.id.radioGroup);
         radioButton1 = findViewById(R.id.radioButton);
         radioButton2 = findViewById(R.id.radioButton2);
-        radioButton3 = findViewById(R.id.radioButton3);
+
 
         // Configurar el evento clic del botón
         Button btnMostrar = findViewById(R.id.btnMostrar);
@@ -32,23 +33,22 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // Llamar a la función para mostrar la selección
-                showSelection();
+                Mostrarseleccion();
             }
         });
     }
 
-    private void showSelection() {
+    private void Mostrarseleccion() {
         // Obtener el ID de la opción seleccionada
         int selectedId = radioGroup.getCheckedRadioButtonId();
 
         // Verificar la opción seleccionada y mostrar un mensaje
         String message;
         if (selectedId == R.id.radioButton) {
-            message = "HAZ ELEGIDO LA OPCION 1";
+            message = "HAZ ELEGIDO GENERO MASCULINO";
         } else if (selectedId == R.id.radioButton2) {
-            message = "HAZ ELEGIDO LA OPCION 2";
-        } else if (selectedId == R.id.radioButton3) {
-            message = "HAZ ELEGIDO LA OPCION 3";
+            message = "HAZ ELEGIDO GENERO FEMENINO";
+
         } else {
             message = "NINGUNA OPCION SELECCIONADA";
         }
